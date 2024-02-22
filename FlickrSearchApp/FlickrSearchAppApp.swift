@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct FlickrSearchAppApp: App {
+    @StateObject var viewModel = SearchViewModel()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(viewModel: viewModel)
         }
     }
 }
